@@ -1,0 +1,62 @@
+United States - labour authority: Department of Labor (DOL), Employment and Training Administration (ETA),
+Office of Foreign Labor Certification (OFLC)
+Collected 15 November 2026. Script: download_us_labour.py (python3 download_us_labour.py).
+
+Role
+OFLC decides labor certifications: PERM (permanent), H-2A and H-2B temporary labor certifications, prevailing
+wage determinations (National Prevailing Wage Center), and certifies H-1B/H-1B1/E-3 Labor Condition
+Applications. State Workforce Agencies (SWAs) process H-2A/H-2B job orders, inspect H-2A housing and run
+prevailing-wage surveys under OFLC grant guidance. USCIS then decides the petitions.
+
+Access
+- https://www.dol.gov/robots.txt returned HTTP 403 (Akamai "Access Denied", 15 November 2026): the host is
+  closed for this task; nothing else was requested from it.
+- wdr.doleta.gov (the old ETA directives library) no longer resolves; foreignlaborcert.doleta.gov is retired.
+- https://flag.dol.gov/robots.txt read (Drupal default); FLAG is the filing portal (login), no guidance.
+- Everything was taken from the Internet Archive (web.archive.org; robots.txt 404), "id_" captures of
+  www.dol.gov URLs, found through CDX queries of www.dol.gov/agencies/eta/foreign-labor/,
+  www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/, www.dol.gov/sites/dolgov/files/ETA/advisories/TEGL/ and
+  foreignlaborcert.doleta.gov/pdf/. The capture used for each file is in the note column of index.tsv.
+
+What was selected
+OFLC's "Policies and Regulations" page (capture of 8 August 2026,
+https://www.dol.gov/agencies/eta/foreign-labor/policy) says OFLC "occasionally issues policy directives to help
+employees of the Department of Labor and SWAs, and also Employers ... understand the procedures for filing and
+adjudicating applications". Taken: every directive listed there (TEGLs 11-07 Change 2, 16-06 Change 1, 17-06
+Change 1, 33-10, 21-06 Change 1, 31-05, 27-06; the PERM program guidance bulletin; the Prevailing Wage
+Determination Policy Guidance, revised November 2009) plus the base TEGLs and attachments they amend, TEGLs
+15-06 and 32-10 (same series), the earlier (May 2005) prevailing-wage guidance, the August 2008 restatement of
+the PERM bulletin, ET Handbook No. 385 (Wage Finding Process, August 1981, SWA survey manual), two 2005
+DFLC directives to the processing-centre directors (Hurricane Katrina field memorandum; hurricanes TEGL), the
+annual Foreign Labor Certification grant planning TEGLs to SWAs (15-17, 14-19, 21-20, 12-21 with Changes 1
+and 2, 15-24 with Change 1), and the H-1B Program Bulletin of 15 January 2021 on secondary employers.
+Not taken (applicant information or law): OFLC FAQs (hundreds of rounds), webinars, fact sheets, filing tips,
+user guides, forms, Federal Register rules and notices, press-style disaster announcements after 2005,
+statistics. The March 2010 "NPWHC" file is an FAQ, not the policy guidance, and was left out.
+
+Saved: 43 PDFs, 46 MB, all kind guidance, dated 1981-2026. All checked with pdfinfo. Many pre-2012 TEGLs are
+scans without a text layer.
+
+Temporary-work agencies, payroll companies, employers of record; EU Blue Card
+- H-1B Program Bulletin "Clarifying Filing Requirements for Labor Condition Applications by Secondary Employers
+  at 20 C.F.R. 655.715 and 655.730(a)", OFLC, 15 January 2021: OFLC "now interprets the regulations to require
+  secondary common-law employers of H-1B workers to file a" Labor Condition Application; it describes
+  "staffing agencies (primary employers) that petition to hire H-1B workers, as well as staffing agencies'
+  clients (secondary employers) where the H-1B workers are assigned to work. While the primary employer
+  typically serves as the H-1B worker's employer for payroll and tax purposes, the secondary employer often
+  exercises considerable control over the worker's day-to-day work." The archive shows the file still on
+  dol.gov in January 2026; its current legal status was not checked.
+- TEGL 21-06 (4 April 2007), Attachment A, part III "Application Filing Procedures", C (repeated in Change 1,
+  25 June 2007): "Job contractors typically supply labor to one or more employers as part of signed work
+  contracts or labor services agreements. The temporary or permanent nature of the work to be performed in such
+  applications will be determined by examining the job contractor's need for such workers, rather than the
+  needs of its employer customers."
+- The EU Blue Card does not apply to the United States.
+
+How much real guidance
+A fair amount, but old: OFLC's published directives are mostly 2005-2011 TEGLs on H-2A/H-2B special
+procedures, the 2009 prevailing-wage guidance and the SWA grant TEGLs. OFLC's internal adjudication
+procedures for its National Processing Centers (PERM audit, H-2A/H-2B review) are not published; current
+practice is otherwise communicated through public FAQs and Federal Register rules.
+
+All of us/labour is the work of this pass (15 November 2026); the earlier agent had not started it.
