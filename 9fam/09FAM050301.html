@@ -1,0 +1,510 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<title>9 FAM 503.1 NUMERICAL LIMITATIONS OVERVIEW</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:ENTERPRISE;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Verdona;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	text-align:center;
+	font-size:10.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	text-align:right;
+	font-size:10.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;
+	font-weight:bold;}
+p.FAMHeading22, li.FAMHeading22, div.FAMHeading22
+	{mso-style-name:"FAM Heading 22";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:22.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMCTLineCentered, li.FAMCTLineCentered, div.FAMCTLineCentered
+	{mso-style-name:"FAM CT Line Centered";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:saddlebrown;
+	font-style:italic;}
+p.FAMCTLineFlush, li.FAMCTLineFlush, div.FAMCTLineFlush
+	{mso-style-name:"FAM CT Line Flush";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:saddlebrown;
+	font-style:italic;}
+p.FAMHeading18, li.FAMHeading18, div.FAMHeading18
+	{mso-style-name:"FAM Heading 18";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMBodyText, li.FAMBodyText, div.FAMBodyText
+	{mso-style-name:"FAM Body Text";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+p.FAMBodyText123, li.FAMBodyText123, div.FAMBodyText123
+	{mso-style-name:"FAM Body Text 123";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:45.0pt;
+	text-indent:-27.0pt;
+	font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+p.FAMBodyTextabc, li.FAMBodyTextabc, div.FAMBodyTextabc
+	{mso-style-name:"FAM Body Text abc";
+	mso-style-link:"FAM Body Text abc Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+span.FAMBodyTextabcChar
+	{mso-style-name:"FAM Body Text abc Char";
+	mso-style-link:"FAM Body Text abc";}
+p.FAMHeading16, li.FAMHeading16, div.FAMHeading16
+	{mso-style-name:"FAM Heading 16";
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	font-weight:bold;}
+span.Bold
+	{mso-style-name:Bold;
+	color:windowtext;
+	font-weight:bold;}
+span.FAMNewRevisedTextBold
+	{mso-style-name:"FAM New\/Revised Text Bold";
+	color:darkmagenta;
+	font-weight:bold;
+	font-style:italic;}
+p.FAMHeading20, li.FAMHeading20, div.FAMHeading20
+	{mso-style-name:"FAM Heading 20";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMHeading20CxSpFirst, li.FAMHeading20CxSpFirst, div.FAMHeading20CxSpFirst
+	{mso-style-name:"FAM Heading 20CxSpFirst";
+	margin:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMHeading20CxSpMiddle, li.FAMHeading20CxSpMiddle, div.FAMHeading20CxSpMiddle
+	{mso-style-name:"FAM Heading 20CxSpMiddle";
+	margin:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMHeading20CxSpLast, li.FAMHeading20CxSpLast, div.FAMHeading20CxSpLast
+	{mso-style-name:"FAM Heading 20CxSpLast";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.HeaderFooterClassificationIndicator, li.HeaderFooterClassificationIndicator, div.HeaderFooterClassificationIndicator
+	{mso-style-name:"Header\/Footer Classification Indicator";
+	margin:0in;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMHeading20SubchapterNumber, li.FAMHeading20SubchapterNumber, div.FAMHeading20SubchapterNumber
+	{mso-style-name:"FAM Heading 20 Subchapter Number";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMHeading20SubchapterNumberCxSpFirst, li.FAMHeading20SubchapterNumberCxSpFirst, div.FAMHeading20SubchapterNumberCxSpFirst
+	{mso-style-name:"FAM Heading 20 Subchapter NumberCxSpFirst";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMHeading20SubchapterNumberCxSpMiddle, li.FAMHeading20SubchapterNumberCxSpMiddle, div.FAMHeading20SubchapterNumberCxSpMiddle
+	{mso-style-name:"FAM Heading 20 Subchapter NumberCxSpMiddle";
+	margin:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.FAMHeading20SubchapterNumberCxSpLast, li.FAMHeading20SubchapterNumberCxSpLast, div.FAMHeading20SubchapterNumberCxSpLast
+	{mso-style-name:"FAM Heading 20 Subchapter NumberCxSpLast";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:20.0pt;
+	font-family:"Verdana",sans-serif;
+	color:darkblue;
+	text-transform:uppercase;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:12.0pt;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:.75in .75in .75in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+<script async="" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOS" id="_fed_an_ua_tag"></script></head>
+
+<body lang="EN-US" link="blue" vlink="purple" style='word-wrap:break-word'>
+
+<div class="WordSection1">
+
+<p class="HeaderFooterClassificationIndicator">UNCLASSIFIED (U)</p>
+
+<p class="FAMHeading22"><a name="M503">9 FAM 503</a><br>
+Numerical Limitations</p>
+
+<p class="FAMHeading20SubchapterNumber"><a name="M503_1">9 FAM 503.1</a></p>
+
+<p class="FAMHeading20">Numerical Limitations Overview</p>
+
+<p class="FAMCTLineCentered">(CT:VISA-1713;   03-01-2023)<br>
+(Office of Origin:  CA/VO)</p>
+
+<p class="FAMHeading18"><a name="M503_1_1">9 fAM 503.1-1</a>  Statutory and REgulatory Authorities </p>
+
+<p class="FAMHeading16"><a name="M503_1_1_A">9 FAM 503.1-1(A)</a>  Immigration and Nationality Act</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1;   11-18-2015)</p>
+
+<p class="FAMBodyText">INA 101(a)(27)(A)-(B) (8 U.S.C. 1101(a)(27)(A)-(B)); INA
+201 (8 U.S.C. 1151); INA 202 (8 U.S.C. 1152); INA 203 (8 U.S.C. 1153); INA 206
+(8 U.S.C. 1156); INA 222(b) (8 U.S.C. 1202).</p>
+
+<p class="FAMHeading16"><a name="M503_1_1_B">9 FAM 503.1-1(B)</a>  Code of Federal Regulations</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1;   11-18-2015)</p>
+
+<p class="FAMBodyText">22 CFR 42.12; 22 CFR 42.22; 22 CFR 42.51; 22 CFR 42.53; 22
+CFR 42.54.</p>
+
+<p class="FAMHeading16"><a name="M503_1_1_C">9 FAM 503.1-1(C)</a>  Public Law</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1;   11-18-2015)</p>
+
+<p class="FAMBodyText">International Security and Development Cooperation Act of
+1981, Public Law 97-113, sec. 714; Immigration Act of 1990, Public Law 101-649,
+sec. 103.</p>
+
+<p class="FAMHeading18"><a name="M503_1_2">9 FAM 503.1-2</a>  allocation of Numbers</p>
+
+<p class="FAMHeading16"><a name="M503_1_2_A">9 FAM 503.1-2(A)</a>  Overview</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1713;   03-01-2023)</p>
+
+<p class="FAMBodyTextabc">a. Immigration legislation establishes annual limits on
+the number of family-sponsored preference, employment-based preference and DV
+immigrants who may be issued IVs or otherwise obtain LPR status based on those
+classifications (no limits exist for immediate relatives or certain special
+immigrants).  Each classification has its own numerical limit, and for many of
+the classifications the numerical limits will vary slightly from year to year. 
+Every individual (whether a principal beneficiary or derivative) who is issued
+an IV or who adjusts status to LPR in a classification counts against its
+numerical limit. </p>
+
+<p class="FAMBodyTextabc">b. Preference classifications in which there is more
+demand for IV numbers than can be accommodated under the numerical limits are
+said to be &#8220;oversubscribed.&#8221; Individuals seeking an IV or
+adjustment to LPR status based on an oversubscribed classification must wait
+until a visa number becomes available in later months or years.  Applicants and
+petitioners should never be discouraged from filing petitions based on
+oversubscribed classifications &#8211; applicants essentially compete on a
+&#8220;first-come, first-served&#8221; basis for available visa numbers, and a
+delay in filing a petition will generally result in a longer wait for visa
+numbers.  See <a href="/fam/09FAM/09FAM050301.html#M503_1_2_B">9 FAM 503.1-2(B)</a> below for information about priority dates.</p>
+
+<p class="FAMBodyTextabc">c.  Besides numerical limits for each preference
+classification, there are also numerical limits on the number of immigrants
+from any single country in a fiscal year. No more than 7% of the total
+numerically limited immigrants may be from a single country.  Those countries
+in which demand for IV numbers exceeds the annual 7% per-country limit are
+deemed &quot;oversubscribed&quot; and natives of those countries may face a
+longer wait for a visa than applicants from other countries.  </p>
+
+<p class="FAMBodyTextabc">d. For DVs, the Secretary of Homeland Security
+identifies &quot;high- admission&quot; and &quot;low-admission&quot; countries
+over the most recent 5 years.  DV numbers are apportioned among six geographic
+regions.  Only natives of &quot;low-admission&quot; countries may compete for
+the DV numbers allotted to their region; natives of &quot;high-admission&quot;
+countries are ineligible.  No one country may receive more than 7% of the
+annually available DV numbers.  Entitlement to immigrant status in the DV
+category lasts only through the end of the fiscal year for which the applicant
+is selected.  See <a href="/fam/09FAM/09FAM050206.html#M502_6">9 FAM 502.6.</a>    </p>
+
+<p class="FAMBodyTextabc">e. The Department allocates IV numbers monthly through
+the Immigrant Visa Allocation Management System (IVAMS) based on Reports 20,
+Monthly Report of Documentarily Qualified Applicants.  See <a href="/fam/09FAM/09FAM050304.html#M503_4_4_A">9 FAM 503.4-4(A)</a>, <a href="/fam/09FAM/09FAM050403.html#M504_3_2_A_1">9 FAM 504.3-2(A)(1)</a> and <a href="/fam/09FAM/09FAM060104.html#M601_4_4_B_2">9 FAM 601.4-4(B)(2).</a></p>
+
+<p class="FAMHeading16"><a name="M503_1_2_B">9 FAM 503.1-2(B)</a>  Priority Dates</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1397;   10-19-2021)</p>
+
+<p class="FAMBodyTextabc">a. For most preference visas, the applicant's place on
+the waiting list is determined by the priority date of the petition.  The
+priority date of the petition is the date on which the completed, signed
+petition is properly filed.  A petition is properly filed when the completed,
+signed petition, including all initial evidence and the correct fee, is filed
+with the DHS or (if permissible) at a U.S. consular office abroad.  For certain
+employment visas, however, the priority date is determined by other means. See
+<a href="/fam/09FAM/09FAM050303.html#M503_3">9 FAM 503.3</a> for additional information about priority dates.</p>
+
+<p class="FAMBodyTextabc">b. A diversity visa applicant's place on the DV waiting
+list is determined by the regional rank order number assigned to the applicant
+at the time the random selection is made.  See <a href="/fam/09FAM/09FAM050206.html#M502_6">9 FAM 502.6</a> for additional
+information about diversity visas.</p>
+
+<p class="FAMHeading16"><a name="M503_1_2_C">9 FAM 503.1-2(C)</a>  Order of Consideration</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1713;   03-01-2023)</p>
+
+<p class="FAMBodyText"><span class="Bold">NVC will request applicants to take the
+steps necessary to meet the requirements of INA 222(b) </span><span class="FAMNewRevisedTextBold">to </span><span class="Bold">apply formally for a
+visa as follows:</span></p>
+
+<p class="FAMBodyText123">(1)  In the chronological order of the priority dates
+of all applicants within each of the immigrant classifications specified in INA
+203(a) and INA 203(b) (family-sponsored preference, employment-based
+preference); and</p>
+
+<p class="FAMBodyText123">(2)  In the random order established by the Secretary
+of State for each region for the fiscal year for applicants entitled to status
+under INA 203(c) (DV entrants).</p>
+
+<p class="FAMHeading16"><a name="M503_1_2_D">9 FAM 503.1-2(D)</a>  Chargeability</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1397;   10-19-2021)</p>
+
+<p class="FAMBodyTextabc">a. To determine the number of potential immigrants from
+each country, each immigrant is assigned a chargeability (sometimes referred to
+as a foreign state chargeability or foreign state area limitation) &#8211; that
+is, the country or foreign state against whose limit the applicant will be
+counted when the visa is issued or status adjusted.  This chargeability, along
+with the visa or adjustment symbol (composed of classification and
+primary/derivative beneficiary identifiers), is used to track the allocation
+and use of visa numbers. </p>
+
+<p class="FAMBodyTextabc">b. The numerical limitations prescribed in INA 201, INA
+202, and INA 203 apply to the foreign states and dependent areas.  See <a href="/fam/09FAM/09FAM050302.html#M503_2_5_A">9 FAM 503.2-5(A)</a> and <a href="/fam/09FAM/09FAM050302.html#M503_2_5_B">9 FAM 503.2-5(B).</a>  An IV applicant subject to these numerical
+limitations is generally chargeable to the numerical limitation applicable to
+the applicant&#8217;s place of birth.  An IV applicant born in a dependent area
+is chargeable to the dependent area (to ensure compliance with the
+dependent-area limitation imposed in INA 202), as well as to the mother
+country.  See <a href="/fam/09FAM/09FAM050302.html#M503_2_4">9 FAM 503.2-4</a> for exceptions to this rule.</p>
+
+<p class="FAMHeading18"><a name="M503_1_3">9 FAM 503.1-3</a>  Visa classes not subject to Numerical
+limitations</p>
+
+<p class="FAMHeading16"><a name="M503_1_3_A">9 FAM 503.1-3(A)</a>  Immediate Relatives</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1397;   10-19-2021)</p>
+
+<p class="FAMBodyText">Immediate relative IVs are not numerically limited. 
+Immediate relative visa classes include spouses of U.S. citizens, children
+(unmarried and under 21 years of age) of U.S. citizens, orphans and Hague
+Convention adoptees adopted abroad or to be adopted in the United States by
+U.S. citizens, parents of U.S. citizens if such citizens are at least 21 years
+old, and certain widow(er)s of U.S. citizens and their children.  See <a href="/fam/09FAM/09FAM050202.html#M502_2_2">9 FAM 502.2-2</a> and <a href="/fam/09FAM/09FAM050203.html#M502_3">9 FAM 502.3</a> for more information about these visa categories.</p>
+
+<p class="FAMHeading16"><a name="M503_1_3_B">9 FAM 503.1-3(B)</a>  Returning Residents</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1397;   10-19-2021)</p>
+
+<p class="FAMBodyText">LPRs who are unable to return to the United States within
+the travel validity of their Form I-551, Permanent Resident Card, or Reentry
+permit may apply at a U.S. Embassy or Consulate for an SIV Returning Resident
+(SB-1) visa under INA 101(a)(27)(A).  See <a href="/fam/09FAM/09FAM050207.html#M502_7_2_B">9 FAM 502.7-2(B)</a> for information
+about visas for returning residents.</p>
+
+<p class="FAMHeading16"><a name="M503_1_3_C">9 FAM 503.1-3(C)</a>  Certain Former U.S. Citizens</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1713;   03-01-2023)</p>
+
+<p class="MsoNormal">Certain U.S. citizens who lost United States citizenship by
+marriage to a noncitizen and certain military expatriates may be classified as
+a special immigrant under INA 101(a)(27)(B).  </p>
+
+<p class="FAMHeading16"><a name="M503_1_3_D">9 FAM 503.1-3(D)</a>  Beneficiaries of Private Laws </p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1397;   10-19-2021)</p>
+
+<p class="FAMBodyText">Beneficiaries of private legislation granting LPR status
+are eligible for special immigrant status as returning LPRs under the
+provisions of INA 101(a)(27)(A) even though they may have been abroad at the
+time the legislation was enacted.  The spouse and children of such individuals
+may also benefit.  See <a href="/fam/09FAM/09FAM050207.html#M502_7_5_B">9 FAM 502.7-5(B)</a> and <a href="/fam/09FAM/09FAM050207.html#M502_7_5_C">9 FAM 502.7-5(C)</a> for information
+about private bills.</p>
+
+<p class="FAMHeading18"><a name="M503_1_4">9 FAM 503.1-4</a>  Visa Classes subject to Numerical
+limitations</p>
+
+<p class="FAMHeading16"><a name="M503_1_4_A">9 FAM 503.1-4(A)</a>  Family-Sponsored Preference Immigrant
+Visas</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1;   11-18-2015)</p>
+
+<p class="FAMBodyText">These visa classes are for specific family relationships
+to a U.S. citizen or LPR and are subject to annual numerical limitations as
+enumerated in INA 203(a).  The family-sponsored preferences are: unmarried sons
+and daughters of U.S. citizens; spouses and children, and unmarried sons and
+daughters, of LPRs; married sons and daughters of U.S. citizens; brothers and
+sisters of U.S. citizens if such citizens are at least 21 years of age.  See <a href="/fam/09FAM/09FAM050202.html#M502_2_3">9 FAM 502.2-3</a> for information about these categories of visas and <a href="/fam/09FAM/09FAM050304.html#M503_4">9 FAM 503.4</a> for
+information about allocation of numbers to these categories.</p>
+
+<p class="FAMHeading16"><a name="M503_1_4_B">9 FAM 503.1-4(B)</a>  Employment-Based Preference Immigrant
+Visas</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-162;   08-25-2016)</p>
+
+<p class="FAMBodyText">These visa classes are for specific categories of workers
+and are subject to annual numerical limitations as enumerated in INA 203(b). 
+The employment-based preferences are: priority workers (including persons with
+extraordinary ability, outstanding professors and researchers and multinational
+managers or executives); professionals holding advanced degrees and persons of
+exceptional ability; skilled workers, professionals, and unskilled workers
+(other workers); certain special immigrants (see <a href="/fam/09FAM/09FAM050205.html#M502_5">9 FAM 502.5</a> for a complete
+list of the subgroups in this category); and immigrant investors.  See <a href="/fam/09FAM/09FAM050204.html#M502_4">9 FAM 502.4</a> and <a href="/fam/09FAM/09FAM050205.html#M502_5">9 FAM 502.5</a> for information about these categories of visas and <a href="/fam/09FAM/09FAM050304.html#M503_4">9 FAM 503.4</a> for information about allocation of numbers to these categories.</p>
+
+<p class="FAMHeading16"><a name="M503_1_4_C">9 FAM 503.1-4(C)</a>  Diversity Visas</p>
+
+<p class="FAMCTLineFlush">(CT:VISA-1658;   11-30-2022)</p>
+
+<p class="FAMBodyText">DV immigrants are subject to numerical limitations.  An individual
+who seeks to participate in the DV lottery must register once each year and if
+selected, must complete the IV process by the end of the DV program year.  See
+<a href="/fam/09FAM/09FAM050206.html#M502_6">9 FAM 502.6</a> for additional information about diversity visas.</p>
+
+<p class="HeaderFooterClassificationIndicator">UNCLASSIFIED (U)</p>
+
+</div>
+
+</body>
+
+</html>
